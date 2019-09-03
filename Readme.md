@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Yurii Khomenko](https://up.htmlacademy.ru/htmlcss/26/user/835515).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://up.htmlacademy.ru/htmlcss/26/user/241239).
 
 ---
 

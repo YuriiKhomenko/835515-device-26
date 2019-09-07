@@ -7,19 +7,25 @@
 
   <body>
     <header>
-      <a href="#"><img src="https://via.placeholder.com/150x150" alt="логотип Device" width="150" height="150"></a>
-      <ul>
-        <li><input type="text" placeholder="Поиск по сайту"></li>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+      <a class="header-logo" href="#"><img src="https://via.placeholder.com/150x150" alt="логотип Device" width="150" height="150"></a>
+      <ul class="user-nav">
+        <li class="user-nav__search">
+          <form class="user-nav__search-form">
+            <label for="site-search">Поиск</label>
+            <input type="search" placeholder="Поиск по сайту" id="site-search">
+            <button type="submit">Поиск</button>
+          </form>
+        </li>
+        <li class="user-nav__enter"><a href="#">Войти</a></li>
+        <li class="user-nav__compare"><a href="#">Сравнить</a></li>
+        <li class="user-nav__cart"><a href="#">Корзина</a></li>
       </ul>
-      <nav>
-        <ul>
-          <li><a href="catalog.html">Каталог товаров</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li class="site-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="site-nav__delivery"><a href="#">Доставка</a></li>
+          <li class="site-nav__guarantee"><a href="#">Гарантия</a></li>
+          <li class="site-nav__contact"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -28,65 +34,56 @@
 
       <h1>Магазин "Device"</h1>
 
-      <section>
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
+      <section class="about-us">
+        <h2 class="about-us__title">О нас</h2>
+        <p class="about-us__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
+        <p class="about-us__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="about-us__list">
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#">Подробнее о нас</a>
+        <a class="about-us__link" href="#">Подробнее о нас</a>
       </section>
 
-      <section>
-        <h2>Контакты</h2>
-        <p>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <img src="https://via.placeholder.com/150x150" alt="карта проезда к Device" width="150" height="150">
-        <button type="button">Напишите нам</button>
+        <a class="contacts__map"><img src="https://via.placeholder.com/150x150" alt="карта проезда к Device" width="150" height="150"></a>
+        <a class="contacts__write-us" href="#">Напишите нам</a>
       </section>
     </main>
 
-    <footer>
-      <img src="https://via.placeholder.com/150x150" alt="логотип Device" width="150" height="150">
-      <ul>
-        <li><input type="text" placeholder="Поиск по сайту"></li>
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
+    <footer class="footer">
+      <img class="footer__logo" src="https://via.placeholder.com/150x150" alt="логотип Device" width="150" height="150">
+      <ul class="user-nav footer__user-nav">
+        <li class="footer__user-item footer__user-item--enter"><a href="#">Войти</a></li>
+        <li class="footer__user-item footer__user-item--compare"><a href="#">Сравнить</a></li>
+        <li class="footer__user-item footer__user-item--cart"><a href="#">Корзина</a></li>
       </ul>
-      <p>г. Москва, ул. Строителей, 15</p>
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+      <p class="footer__text">г. Москва, ул. Строителей, 15</p>
+      <ul class="footer__nav">
+        <li class="footer__nav-item footer__nav-item--delivery"><a href="#">Доставка</a></li>
+        <li class="footer__nav-item footer__nav-item--guarantee"><a href="#">Гарантия</a></li>
+        <li class="footer__nav-item footer__nav-item--contacts"><a href="#">Контакты</a></li>
       </ul>
 
-      <p>Тел: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+      <p class="footer__tel">Тел: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
 
-      <div>
-        <ul>
-          <li>
-            <a href="#">
-              <img src="https://via.placeholder.com/30x30" alt="facebook" width="30" height="30">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="https://via.placeholder.com/30x30" alt="instagram" width="30" height="30">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="https://via.placeholder.com/30x30" alt="twitter" width="30" height="30">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a href="https://htmlacademy.ru/"><img src="https://via.placeholder.com/30x30" alt="HTML Academy" width="30" height="30"></a>
+      <ul class="footer__social-list">
+        <li>
+          <a class="footer__social-item footer__social-item--facebook" href="#">Facebook</a>
+        </li>
+        <li>
+          <a class="footer__social-item footer__social-item--instagram" href="#">Instagram</a>
+        </li>
+        <li>
+          <a class="footer__social-item footer__social-item--twitter" href="#">Twitter</a>
+        </li>
+      </ul>
+      <a class="footer__link" href="https://htmlacademy.ru/"><img src="https://via.placeholder.com/30x30" alt="HTML Academy" width="30" height="30"></a>
     </footer>
   </body>
 </html>

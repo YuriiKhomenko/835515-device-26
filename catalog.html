@@ -26,6 +26,14 @@
     <nav class="site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__catalog"><a href="catalog.html">Каталог товаров</a></li>
+        <ul class="catalog__sub-menu">
+          <li class="catalog__sub-menu--item">Виртуальная реальность</li>
+          <li class="catalog__sub-menu--item">Моноподы для селфи</li>
+          <li class="catalog__sub-menu--item">Экшн-камеры</li>
+          <li class="catalog__sub-menu--item">Фитнес-браслеты</li>
+          <li class="catalog__sub-menu--item">Умные часы</li>
+          <li class="catalog__sub-menu--item">Квадракоптеры</li>
+        </ul>
         <li class="site-nav__delivery"><a href="#">Доставка</a></li>
         <li class="site-nav__guarantee"><a href="#">Гарантия</a></li>
         <li class="site-nav__contact"><a href="#">Контакты</a></li>
@@ -41,7 +49,12 @@
       <li class="breadcumbs__item"><a href="#">Моноподы для селфи</a></li>
     </ul>
 
+    <b>Фильтр:</b>
     <form class="filter-form">
+      <fieldset class="filter-form__fieldset">
+        <p class="filter-form__title">Стоимость</p>
+        <input type="range" name="price" min="0" max="10000" step="10">
+      </fieldset>
       <fieldset class="filter-form__fieldset">
         <p class="filter-form__title">Цвет</p>
         <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" value="black-color" checked>
@@ -75,6 +88,19 @@
       <input class="filter-form__submit" type="submit" value="Показать">
     </form>
 
+    <div class="sorting">
+      <b>Сортировка:</b>
+      <ul class="sort-list">
+        <li class="sort-list__item">По цене</li>
+        <li class="sort-list__item">По типу</li>
+        <li class="sort-list__item">По популярности</li>
+      </ul>
+      <ul class="arrows-list">
+        <li class="arrows-list__up">Arrow UP</li>
+        <li class="arrows-list__down">Arrow DOWN</li>
+      </ul>
+    </div>
+
     <section class="goods">
       <h2 class="goods__title">Список моноподов для селфи</h2>
       <ul class="goods__list">
@@ -100,6 +126,17 @@
         </li>
       </ul>
     </section>
+
+    <div class="pagination">
+      <ul class="pagination__list">
+        <li class="pagination__item"><a class="pagination__back" href="#">Назад</a></li>
+        <li class="pagination__item"><a href="#">1</a></li>
+        <li class="pagination__item"><a href="#">2</a></li>
+        <li class="pagination__item"><a href="#">3</a></li>
+        <li class="pagination__item"><a class="pagination__forward" href="#">Вперед</a></li>
+        </li>
+      </ul>
+    </div>
   </main>
 
   <footer class="footer">

@@ -7,8 +7,8 @@
 </head>
 
 <body>
-  <header>
-    <a class="header-logo" href="#"><img src="https://via.placeholder.com/150x150" alt="логотип Device" width="150"
+  <header class="header">
+    <a class="header-logo" href="index.html"><img src="https://via.placeholder.com/150x150" alt="логотип Device" width="150"
         height="150"></a>
     <ul class="user-nav">
       <li class="user-nav__search">
@@ -43,89 +43,101 @@
 
   <main class="main">
     <h1 class="main__title">Моноподы для селфи</h1>
-    <ul class="main__breadcumbs breadcumbs">
+    <ul class="main__breadcrumbs breadcrumbs">
       <li class="breadcumbs__item"><a href="index.html">Главная</a></li>
       <li class="breadcumbs__item"><a href="#">Каталог товаров</a></li>
       <li class="breadcumbs__item"><a href="#">Моноподы для селфи</a></li>
     </ul>
+    <section class="main-content">
+      <div class="filter">
+        <b>Фильтр:</b>
+        <input class="filter-form">
+          <fieldset class="filter-form__fieldset">
+            <p class="filter-form__title">Стоимость</p>
+            <input type="range" name="price" min="0" max="10000" step="10">
+          </fieldset>
+          <fieldset class="filter-form__fieldset">
+            <p class="filter-form__title">Цвет</p>
+            <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" value="black-color"
+              checked>
+            <label for="black-color">Черный</label>
 
-    <b>Фильтр:</b>
-    <form class="filter-form">
-      <fieldset class="filter-form__fieldset">
-        <p class="filter-form__title">Стоимость</p>
-        <input type="range" name="price" min="0" max="10000" step="10">
-      </fieldset>
-      <fieldset class="filter-form__fieldset">
-        <p class="filter-form__title">Цвет</p>
-        <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" value="black-color" checked>
-        <label for="black-color">Черный</label>
+            <input class="filter-form__checkbox" type="checkbox" id="white-color" name="white-color"
+              value="white-color">
+            <label for="white-color">Белый</label>
 
-        <input class="filter-form__checkbox" type="checkbox" id="white-color" name="white-color" value="white-color">
-        <label for="white-color">Белый</label>
+            <input class="filter-form__checkbox" type="checkbox" id="blue-color" name="blue-color" value="blue-color"
+              checked>
+            <label for="blue-color">Синий</label>
 
-        <input class="filter-form__checkbox" type="checkbox" id="blue-color" name="blue-color" value="blue-color" checked>
-        <label for="blue-color">Синий</label>
+            <input class="filter-form__checkbox" type="checkbox" id="red-color" name="red-color" value="red-color"
+              checked>
+            <label for="red-color">Красный</label>
 
-        <input class="filter-form__checkbox" type="checkbox" id="red-color" name="red-color" value="red-color" checked>
-        <label for="red-color">Красный</label>
-
-        <input class="filter-form__checkbox" type="checkbox" id="pink-color" name="pink-color" value="pink-color">
-        <label for="pink-color">Розовый</label>
-      </fieldset>
-      <fieldset class="filter-form__fieldset">
-        <p class="filter-form__title">Bluetooth</p>
-        <ul>
-          <li>
-            <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
-            <label for="bluetooth-yes">Есть</label>
-          </li>
-          <li>
-            <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-no" value="no">
-            <label for="bluetooth-no">Нет</label>
-          </li>
-        </ul>
-      </fieldset>
-      <input class="filter-form__submit" type="submit" value="Показать">
-    </form>
-
-    <div class="sorting">
-      <b>Сортировка:</b>
-      <ul class="sort-list">
-        <li class="sort-list__item">По цене</li>
-        <li class="sort-list__item">По типу</li>
-        <li class="sort-list__item">По популярности</li>
-      </ul>
-      <ul class="arrows-list">
-        <li class="arrows-list__up">Arrow UP</li>
-        <li class="arrows-list__down">Arrow DOWN</li>
-      </ul>
-    </div>
-
-    <section class="goods">
-      <h2 class="goods__title">Список моноподов для селфи</h2>
-      <ul class="goods__list">
-        <li class="goods__item">
-          <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="любительская селфи-палка" width="100" height="100">
-          <h3 class="goods__item-title">Любительская селфи-палка</h3>
-          <span class="goods__item-price">500 руб.</span>
-        </li>
-        <li class="goods__item">
-          <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="профессиональная селфи-палка" width="100" height="100">
-          <h3 class="goods__item-title">Пофессиональная селфи-палка</h3>
-          <span class="goods__item-price">1 500 руб.</span>
-        </li>
-        <li class="goods__item">
-          <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="непотопляемая селфи-палка" width="100" height="100">
-          <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
-          <span class="goods__item-price">2 500 руб.</span>
-        </li>
-        <li class="goods__item">
-          <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="селфи-палка следуй за мной" width="100" height="100">
-          <h3 class="goods__item-title">Селфи-палка "Следуй за мной"</h3>
-          <span class="goods__item-price">4 900 руб.</span>
-        </li>
-      </ul>
+            <input class="filter-form__checkbox" type="checkbox" id="pink-color" name="pink-color" value="pink-color">
+            <label for="pink-color">Розовый</label>
+          </fieldset>
+          <fieldset class="filter-form__fieldset">
+            <p class="filter-form__title">Bluetooth</p>
+            <ul>
+              <li>
+                <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
+                <label for="bluetooth-yes">Есть</label>
+              </li>
+              <li>
+                <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-no" value="no">
+                <label for="bluetooth-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <input class="filter-form__submit" type="submit" value="Показать">
+        </input>
+      </div>
+      <div class="cards">
+        <div class="sorting">
+          <b>Сортировка:</b>
+          <ul class="sort-list">
+            <li class="sort-list__item"><a href="#">По цене</a></li>
+            <li class="sort-list__item"><a href="#">По типу</a></li>
+            <li class="sort-list__item"><a href="#">По популярности</a></li>
+          </ul>
+          <ul class="arrows-list">
+            <li class="arrows-list__up"><a href="#">Arrow UP</a></li>
+            <li class="arrows-list__down"><a href="#">Arrow DOWN</a></li>
+          </ul>
+        </div>
+        <div class="goods">
+          <h2 class="goods__title">Список моноподов для селфи</h2>
+          <ul class="goods__list">
+            <li class="goods__item">
+              <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="любительская селфи-палка"
+                width="100" height="100">
+              <h3 class="goods__item-title">Любительская селфи-палка</h3>
+              <span class="goods__item-price">500 руб.</span>
+            </li>
+            <li class="goods__item">
+              <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="профессиональная селфи-палка"
+                width="100" height="100">
+              <h3 class="goods__item-title">Пофессиональная селфи-палка</h3>
+              <span class="goods__item-price">1 500 руб.</span>
+            </li>
+            <li class="goods__item">
+              <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="непотопляемая селфи-палка"
+                width="100" height="100">
+              <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
+              <span class="goods__item-price">2 500 руб.</span>
+            </li>
+            <li class="goods__item">
+              <img class="goods__photo" src="https://via.placeholder.com/100x100" alt="селфи-палка следуй за мной"
+                width="100" height="100">
+              <h3 class="goods__item-title">Селфи-палка "Следуй за мной"</h3>
+              <span class="goods__item-price">4 900 руб.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
+
 
     <div class="pagination">
       <ul class="pagination__list">

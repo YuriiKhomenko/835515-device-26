@@ -48,60 +48,74 @@
 
         <ul class="slider__list">
           <li class="slider__item">
-            <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
-            <b class="slider__title">Делай селфи, как Бен Стиллер!</b>
-            <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
-              Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a class="slider__link" href="#">Подробнее</a>
-            <table class="slider__spec">
-              <tr class="slider__term">
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-              <tr class="slider__data">
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
-              </tr>
-            </table>
+            <div class="slider__img">
+              <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
+            </div>
+            <div class="slider__content">
+              <b class="slider__title">Делай селфи, как Бен Стиллер!</b>
+              <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
+                Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <a class="slider__link" href="#">Подробнее</a>
+              <table class="slider__spec">
+                <tr class="slider__term">
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+                <tr class="slider__data">
+                  <td>Длина палки</td>
+                  <td>Вес палки</td>
+                  <td>Материал</td>
+                </tr>
+              </table>
+            </div>
           </li>
           <li class="slider__item">
-            <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
-            <b class="slider__title">Худеем правильно</b>
-            <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
-            <a class="slider__link" href="#">Подробнее</a>
-            <table class="slider__spec">
-              <tr class="slider__term">
-                <td>48 часов</td>
+            <div class="slider__img">
+              <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
+            </div>
+            <div class="slider__content">
+              <b class="slider__title">Худеем правильно</b>
+              <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
+                соблюдать диету</p>
+              <a class="slider__link" href="#">Подробнее</a>
+              <tr class="slider__spec">
+                <tr class="slider__term">
+                  <td>48 часов</td>
+                </tr>
+                <tr class="slider__data">
+                  <td>Без подзарядки</td>
+                </tr>
               </tr>
-              <tr class="slider__data">
-                <td>Без подзарядки</td>
-              </tr>
-            </table>
+            </div>
           </li>
           <li class="slider__item">
-            <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
-            <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
-            <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="slider__link" href="#">Подробнее</a>
-            <table class="slider__spec">
-              <tr class="slider__term">
-                <td>800 м</td>
-                <td>50 м</td>
+            <div class="slider__img">
+              <img src="https://via.placeholder.com/100x100" alt="монопод" width="100" height="100">
+            </div>
+            <div class="slider__content">
+              <b class="slider__title">Порхает как бабочка, жалит как пчела</b>
+              <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                замаскированным под стандартную камеру.</p>
+              <a class="slider__link" href="#">Подробнее</a>
+              <tr class="slider__spec">
+                <tr class="slider__term">
+                  <td>800 м</td>
+                  <td>50 м</td>
+                </tr>
+                <tr class="slider__data">
+                  <td>Дальность полета</td>
+                  <td>Радиус поражения</td>
+                </tr>
               </tr>
-              <tr class="slider__data">
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
-              </tr>
-            </table>
+            </div>
           </li>
         </ul>
-        <ul class="slider-nav">
-          <li><button class="slider-nav__btn" type="button"></button></li>
-          <li><button class="slider-nav__btn" type="button"></button></li>
-          <li><button class="slider-nav__btn" type="button"></button></li>
-        </ul>
+        <div class="slider-nav">
+          <button class="slider-nav__btn" type="button"></button>
+          <button class="slider-nav__btn" type="button"></button>
+          <button class="slider-nav__btn" type="button"></button>
+        </div>
       </section>
 
       <section class="popular-goods">
@@ -144,10 +158,18 @@
       <section class="producers">
         <h2 class="visually-hidden">Компании производители</h2>
         <ul class="producers__list">
-          <li class="producers__item">DJI</li>
-          <li class="producers__item">SP. Gadgets</li>
-          <li class="producers__item">GoPro</li>
-          <li class="producers__item">VIVE</li>
+          <li class="producers__item">
+            <a href="#"><img src="https://via.placeholder.com/50x50" alt="Лого DJI" width="50" height="50"></a>
+          </li>
+          <li class="producers__item">
+            <a href="#"><img src="https://via.placeholder.com/50x50" alt="Лого SP. Gadgets" width="50" height="50"></a>
+          </li>
+          <li class="producers__item">
+            <a href="#"><img src="https://via.placeholder.com/50x50" alt="Лого GoPro" width="50" height="50"></a>
+          </li>
+          <li class="producers__item">
+            <a href="#"><img src="https://via.placeholder.com/50x50" alt="Лого Vive" width="50" height="50"></a>
+          </li>
         </ul>
       </section>
 

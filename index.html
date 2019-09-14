@@ -12,7 +12,7 @@
         <li class="user-nav__search">
           <form class="user-nav__search-form">
             <label for="site-search">Поиск</label>
-            <input type="search" placeholder="Поиск по сайту" id="site-search">
+            <input type="search" placeholder="Поиск по сайту" id="site-search" aria-label="Поиск по сайту">
             <button type="submit">Поиск</button>
           </form>
         </li>
@@ -24,7 +24,7 @@
         <ul class="site-nav__list">
           <li class="site-nav__catalog">
             <a href="catalog.html">Каталог товаров</a>
-            <ul class="catalog__sub-menu">
+            <ul class="catalog__sub-menu visually-hidden">
               <li class="catalog__sub-menu--item"><a href="#">Виртуальная реальность</a></li>
               <li class="catalog__sub-menu--item"><a href="#">Моноподы для селфи</a></li>
               <li class="catalog__sub-menu--item"><a href="#">Экшн-камеры</a></li>
@@ -70,7 +70,7 @@
               </table>
             </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item visually-hidden">
             <div class="slider__img">
               <img src="img/slider-2.png" alt="фитнес-браслет" width="345" height="485">
             </div>
@@ -89,7 +89,7 @@
               </table>
             </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item visually-hidden">
             <div class="slider__img">
               <img src="img/slider-3.png" alt="квадрокоптер" width="526" height="334">
             </div>
@@ -190,7 +190,7 @@
         <p class="contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
-        <a class="contacts__map"><img src="img/map.jpg" alt="Адрес фирмы 'Device': Москва, ул. Строителей, 15 " width="560" height="222"></a>
+        <a class="contacts__map"><img src="img/map.jpg" alt="Адрес фирмы 'Device': Москва, ул. Строителей, 15" width="560" height="222"></a>
         <a class="contacts__write-us" href="#">Напишите нам</a>
       </section>
     </main>
@@ -213,16 +213,45 @@
 
       <ul class="footer__social-list">
         <li>
-          <a class="footer__social-item footer__social-item--facebook" href="#">Facebook</a>
+          <a class="footer__social-item footer__social-item--facebook" href="#" aria-label="Магазин Девайс в Фейсбук">Facebook</a>
         </li>
         <li>
-          <a class="footer__social-item footer__social-item--instagram" href="#">Instagram</a>
+          <a class="footer__social-item footer__social-item--instagram" href="#"
+            aria-label="Магазин Девайс в Инстаграм">Instagram</a>
         </li>
         <li>
-          <a class="footer__social-item footer__social-item--twitter" href="#">Twitter</a>
+          <a class="footer__social-item footer__social-item--twitter" href="#"
+            aria-label="Магазин Девайс в Твиттер">Twitter</a>
         </li>
       </ul>
       <a class="footer__link" href="https://htmlacademy.ru/"><img src="img/logo-html.svg" alt="HTML Academy" width="27" height="35"></a>
     </footer>
+
+    <div class="modal">
+
+      <button type="button" aria-label="Закрыть контактную форму Девайс"><span>Закрыть окно</span></button>
+      <form class="modal_form" method="POST" action="https://echo.htmlacademy.ru">
+
+        <label for="modal-name">Ваше имя:</label>
+        <input class="modal__name" type="text" id="modal-name" name="name" placeholder="Имя Фамилия">
+
+        <label for="modal-email">Ваш e-mail:</label>
+        <input class="modal__email" type="email" id="modal-email" name="email" placeholder="email@example.com">
+
+        <label for="modal-message">Текст письма:</label>
+        <textarea class="modal__text" id="modal-message" name="message" placeholder="В свободной форме"></textarea>
+
+        <input class="modal__submit" type="submit" value="Отправить">
+
+      </form>
+
+    </div>
+
+    <div class="map-popup">
+
+      <button type="button" aria-label="Закрыть карту проезда к Девайс"><span>Закрыть карту</span></button>
+      <img src="img/map.jpg" alt="Адрес фирмы 'Device': Москва, ул. Строителей, 15" width="560" height="222">
+
+    </div>
   </body>
 </html>

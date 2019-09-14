@@ -14,7 +14,7 @@
       <li class="user-nav__search">
         <form class="user-nav__search-form">
           <label for="site-search">Поиск</label>
-          <input type="search" placeholder="Поиск по сайту" id="site-search">
+          <input type="search" placeholder="Поиск по сайту" id="site-search" aria-label="Поиск по сайту">
           <button type="submit">Поиск</button>
         </form>
       </li>
@@ -27,12 +27,12 @@
       <ul class="site-nav__list">
         <li class="site-nav__catalog"><a href="catalog.html">Каталог товаров</a>
           <ul class="catalog__sub-menu">
-            <li class="catalog__sub-menu--item">Виртуальная реальность</li>
-            <li class="catalog__sub-menu--item">Моноподы для селфи</li>
-            <li class="catalog__sub-menu--item">Экшн-камеры</li>
-            <li class="catalog__sub-menu--item">Фитнес-браслеты</li>
-            <li class="catalog__sub-menu--item">Умные часы</li>
-            <li class="catalog__sub-menu--item">Квадрокоптеры</li>
+            <li class="catalog__sub-menu--item"><a href="#">Виртуальная реальность</a></li>
+            <li class="catalog__sub-menu--item"><a href="#">Моноподы для селфи</a></li>
+            <li class="catalog__sub-menu--item"><a href="#">Экшн-камеры</a></li>
+            <li class="catalog__sub-menu--item"><a href="#">Фитнес-браслеты</a></li>
+            <li class="catalog__sub-menu--item"><a href="#">Умные часы</a></li>
+            <li class="catalog__sub-menu--item"><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
         <li class="site-nav__delivery"><a href="#">Доставка</a></li>
@@ -52,34 +52,30 @@
     <section class="main-content">
       <div class="filter">
         <b>Фильтр:</b>
-        <form class="filter-form">
+        <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="filter-form__fieldset">
-            <p class="filter-form__title">Стоимость</p>
+            <legend class="filter-form__title">Стоимость</legend>
             <input type="range" name="price" min="0" max="10000" step="10">
           </fieldset>
           <fieldset class="filter-form__fieldset">
-            <p class="filter-form__title">Цвет</p>
-            <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" value="black-color"
-              checked>
+            <legend class="filter-form__title">Цвет</legend>
+            <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" checked>
             <label for="black-color">Черный</label>
 
-            <input class="filter-form__checkbox" type="checkbox" id="white-color" name="white-color"
-              value="white-color">
+            <input class="filter-form__checkbox" type="checkbox" id="white-color" name="white-color">
             <label for="white-color">Белый</label>
 
-            <input class="filter-form__checkbox" type="checkbox" id="blue-color" name="blue-color" value="blue-color"
-              checked>
+            <input class="filter-form__checkbox" type="checkbox" id="blue-color" name="blue-color" checked>
             <label for="blue-color">Синий</label>
 
-            <input class="filter-form__checkbox" type="checkbox" id="red-color" name="red-color" value="red-color"
-              checked>
+            <input class="filter-form__checkbox" type="checkbox" id="red-color" name="red-color" checked>
             <label for="red-color">Красный</label>
 
-            <input class="filter-form__checkbox" type="checkbox" id="pink-color" name="pink-color" value="pink-color">
+            <input class="filter-form__checkbox" type="checkbox" id="pink-color" name="pink-color">
             <label for="pink-color">Розовый</label>
           </fieldset>
           <fieldset class="filter-form__fieldset">
-            <p class="filter-form__title">Bluetooth</p>
+            <legend class="filter-form__title">Bluetooth</legend>
             <ul>
               <li>
                 <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>

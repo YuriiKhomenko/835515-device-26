@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Gilroy";
+  src:
+    url("../fonts/gilroyextrabold.woff"),
+    url("../fonts/gilroyextrabold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src:
+    url("../fonts/gilroylight.woff"),
+    url("../fonts/gilroylight.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/opensans.woff"),
+    url("../fonts/opensans.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/opensanslight.woff"),
+    url("../fonts/opensanslight.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gilroy", "Verdana", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #f7e296;
+  color: #000000;
+}
+
+.user-nav {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.user-nav__search-form input::placeholder {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.site-nav a {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sub-menu a {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.header-logo:hover,
+.header a:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active,
+.header a:active {
+  opacity: 0.3;
+}
+
+.user-nav__input {
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #000000;
+  background-color: transparent;
+}
+
+.user-nav__input:hover {
+  opacity: 0.6;
+}
+
+.user-nav__input:focus {
+  color: #000000;
+}
+
+.user-nav__btn {
+  border: 2px solid #000000;
+  color: #000000;
+  background-color: transparent;
+}
+
+.user-nav__btn:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.user-nav__btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+}
+
+.about-us__title,
+.contacts__title {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.about-us__text,
+.contacts__text {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+}
+
+.about-us__list {
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.about-us__link,
+.contacts__write-us,
+.filter-form__submit {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.about-us__link:hover,
+.contacts__write-us:hover,
+.filter-form__submit:hover {
+  background-color: #f0c52e;
+}
+
+.about-us__link:active,
+.contacts__write-us:active,
+.filter-form__submit:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+.footer__user-item a {
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__user-item a:hover {
+  color: rgba(255, 255, 255, 1.0);
+}
+
+.footer__user-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer__nav-item a {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer__nav-item a:hover {
+  opacity: 0.6;
+}
+
+.footer__nav-item a:active {
+  opacity: 0.3;
+}
+
+.footer__tel,
+.footer__address {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.footer__logo {
+  display: block;
+  height: 35px;
+  width: 163px;
+  fill: #ffc600;
+}
+
+.footer__logo:hover {
+  opacity: 0.6;
+}
+
+.footer__logo:active {
+  opacity: 0.3;
+}
+
+.footer__link:hover {
+  opacity: 0.6;
+}
+
+.footer__link:active {
+  opacity: 0.3;
+}
+
+.modal,
+.map-popup {
+  display: none;
+}
+
+.filter {
+  background-color: #eeeeee;
+}
+
+.main__title {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.main__breadcrumbs a {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main__breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main__breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filter-form__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.filter-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #dcdcdc;
+}
+
+.filter-form__label {
+  font-family: "Open Sans", "Verdana", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.filter-form input[type="submit"] {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}

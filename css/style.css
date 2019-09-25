@@ -134,9 +134,9 @@ button {
 
 .user-nav__enter {
   position: relative;
-  
+
   padding-left: 27px;
-  
+
   margin-right: 185px;
 }
 
@@ -161,7 +161,7 @@ button {
 
 .user-nav__compare {
   position: relative;
-  
+
   padding-left: 27px;
   margin-right: 12px;
 }
@@ -227,7 +227,7 @@ button {
   position: absolute;
   top: 1px;
   right: 1px;
-  
+
   width: 16px;
   height: 16px;
 
@@ -458,7 +458,7 @@ button {
 }
 
 .footer__user-item svg {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .footer__user-item path {
@@ -474,8 +474,16 @@ button {
   color: rgba(255, 255, 255, 1.0);
 }
 
+.footer__user-item a:hover > svg path {
+  opacity: 0.6;
+}
+
 .footer__user-item a:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.footer__user-item a:active > svg path {
+  opacity: 0.3;
 }
 
 .footer__user-item path:hover {
@@ -512,7 +520,7 @@ button {
   justify-content: space-between;
   width: 440px;
   flex-wrap: wrap;
-  
+
 }
 
 .footer__nav-item a:hover {

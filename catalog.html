@@ -30,12 +30,24 @@
         <ul class="site-nav__list">
           <li class="site-nav__catalog"><a href="catalog.html">Каталог товаров</a>
             <ul class="sub-menu">
-              <li class="sub-menu__item"><a href="#">Виртуальная реальность</a></li>
-              <li class="sub-menu__item"><a href="#">Моноподы для селфи</a></li>
-              <li class="sub-menu__item"><a href="#">Экшн-камеры</a></li>
-              <li class="sub-menu__item"><a href="#">Фитнес-браслеты</a></li>
-              <li class="sub-menu__item"><a href="#">Умные часы</a></li>
-              <li class="sub-menu__item"><a href="#">Квадрокоптеры</a></li>
+              <li class="sub-menu__column">
+                <ul>
+                  <li class="sub-menu__item"><a href="#">Виртуальная реальность</a></li>
+                  <li class="sub-menu__item"><a href="#">Моноподы для селфи</a></li>
+                  <li class="sub-menu__item"><a href="#">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li class="sub-menu__column">
+                <ul>
+                  <li class="sub-menu__item"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="sub-menu__item"><a href="#">Умные часы</a></li>
+                </ul>
+              </li>
+              <li class="sub-menu__column">
+                <ul>
+                  <li class="sub-menu__item"><a href="#">Квадрокоптеры</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li class="site-nav__item--delivery"><a class="site-nav__delivery" href="#">Доставка</a></li>
@@ -68,31 +80,34 @@
             </fieldset>
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__title">Цвет</legend>
-              <input class="filter-form__checkbox" type="checkbox" id="black-color" name="black-color" checked>
+              <input class="filter-form__checkbox visually-hidden" type="checkbox" id="black-color" name="black-color" checked>
               <label class="filter-form__label" for="black-color">Черный</label>
 
-              <input class="filter-form__checkbox" type="checkbox" id="white-color" name="white-color">
+              <input class="filter-form__checkbox visually-hidden" type="checkbox" id="white-color" name="white-color">
               <label class="filter-form__label" for="white-color">Белый</label>
 
-              <input class="filter-form__checkbox" type="checkbox" id="blue-color" name="blue-color" checked>
+              <input class="filter-form__checkbox visually-hidden" type="checkbox" id="blue-color" name="blue-color"
+                checked>
               <label class="filter-form__label" for="blue-color">Синий</label>
 
-              <input class="filter-form__checkbox" type="checkbox" id="red-color" name="red-color" checked>
+              <input class="filter-form__checkbox visually-hidden" type="checkbox" id="red-color" name="red-color"
+                checked>
               <label class="filter-form__label" for="red-color">Красный</label>
 
-              <input class="filter-form__checkbox" type="checkbox" id="pink-color" name="pink-color">
+              <input class="filter-form__checkbox visually-hidden" type="checkbox" id="pink-color" name="pink-color">
               <label class="filter-form__label" for="pink-color">Розовый</label>
             </fieldset>
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__title">Bluetooth</legend>
-              <ul>
+              <ul class="radio-list">
                 <li>
-                  <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
-                  <label class="filter-form__label" for="bluetooth-yes">Есть</label>
+                  <input class="filter-form__radio visually-hidden" type="radio" name="bluetooth" id="bluetooth-yes" value="yes" checked>
+                  <label class="filter-form__label--radio" for="bluetooth-yes">Есть</label>
                 </li>
                 <li>
-                  <input class="filter-form__radio" type="radio" name="bluetooth" id="bluetooth-no" value="no">
-                  <label class="filter-form__label" for="bluetooth-no">Нет</label>
+                  <input class="filter-form__radio visually-hidden" type="radio" name="bluetooth" id="bluetooth-no"
+                    value="no">
+                  <label class="filter-form__label--radio" for="bluetooth-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
@@ -103,13 +118,19 @@
           <div class="sorting">
             <b>Сортировка:</b>
             <ul class="sort-list">
-              <li class="sort-list__item"><a href="#">По цене</a></li>
+              <li class="sort-list__item sort-list__item--active"><a href="#">По цене</a></li>
               <li class="sort-list__item"><a href="#">По типу</a></li>
               <li class="sort-list__item"><a href="#">По популярности</a></li>
             </ul>
             <ul class="arrows-list">
-              <li class="arrows-list__up"><a href="#" aria-label="Arrow UP">Arrow UP</a></li>
-              <li class="arrows-list__down"><a href="#" aria-label="Arrow DOWN">Arrow DOWN</a></li>
+              <li class="arrows-list__item">
+                <a class="arrows-list__up" href="#" aria-label="Arrow UP">
+                  <span class="visually-hidden">Arrow Up</span></a>
+                </li>
+              <li class="arrows-list__item">
+                <a class="arrows-list__down arrows--active" href="#" aria-label="Arrow DOWN">
+                  <span class="visually-hidden">Arrow Down</span></a>
+              </li>
             </ul>
           </div>
             <div class="goods">
@@ -150,13 +171,19 @@
               </ul>
               <div class="pagination">
                 <ul class="pagination__list">
-                  <li class="pagination__item"><a class="pagination__back" href="#"
-                      aria-label="Предыдущая страница каталога">Назад</a></li>
-                  <li class="pagination__item"><a href="#" aria-label="Первая страница каталога">1</a></li>
-                  <li class="pagination__item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
-                  <li class="pagination__item"><a href="#" aria-label="Третья страница каталога">3</a></li>
-                  <li class="pagination__item"><a class="pagination__forward" href="#"
-                      aria-label="Следующая страница каталога">Вперед</a></li>
+                  <li class="pagination__item">
+                    <a class="pagination__back" href="#" aria-label="Предыдущая страница каталога">Назад</a>
+                  </li>
+                  <li class="pagination__item">
+                    <ul class="num__list">
+                      <li class="num__item num__item--active"><a href="#" aria-label="Первая страница каталога">1</a></li>
+                      <li class="num__item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
+                      <li class="num__item"><a href="#" aria-label="Третья страница каталога">3</a></li>
+                    </ul>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__forward" href="#" aria-label="Следующая страница каталога">Вперед</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -177,14 +204,16 @@
 
         <ul class="user-nav footer__user-nav">
           <li class="footer__user-item footer__user-item--enter">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Валентин Петухов</a>
+              <a class="footer__user-item--enter" href="#">Валентин Петухов</a>
           </li>
-          <li class="footer__user-item footer__user-item--exit"><a href="#">Выйти</a></li>
+          <li class="footer__user-item footer__user-item--exit">
+            <a class="footer__user-item--exit" href="#">Выйти</a>
+          </li>
           <li class="footer__user-item footer__user-item--compare">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a>
+            <a class="footer__user-item--compare" href="#">Сравнить</a>
           </li>
           <li class="footer__user-item footer__user-item--cart">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a>
+            <a class="footer__user-item--cart" href="#">Корзина</a>
           </li>
         </ul>
       </div>

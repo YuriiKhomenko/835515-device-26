@@ -16,7 +16,7 @@
             <form class="user-nav__search-form">
               <label for="site-search" class="visually-hidden">Поиск</label>
               <input class="user-nav__input" type="search" placeholder="Поиск по сайту" id="site-search" aria-label="Поиск по сайту">
-              <button class="user-nav__btn visually-hidden" type="submit">Найти</button>
+              <button class="user-nav__btn" type="submit">Найти</button>
             </form>
           </li>
           <li><a class="user-nav__enter" href="#">Войти</a></li>
@@ -28,12 +28,24 @@
             <li class="site-nav__catalog">
               <a href="catalog.html">Каталог товаров</a>
               <ul class="sub-menu">
-                <li class="sub-menu__item"><a href="#">Виртуальная реальность</a></li>
-                <li class="sub-menu__item"><a href="#">Моноподы для селфи</a></li>
-                <li class="sub-menu__item"><a href="#">Экшн-камеры</a></li>
-                <li class="sub-menu__item"><a href="#">Фитнес-браслеты</a></li>
-                <li class="sub-menu__item"><a href="#">Умные часы</a></li>
-                <li class="sub-menu__item"><a href="#">Квадрокоптеры</a></li>
+                <li class="sub-menu__column">
+                  <ul>
+                    <li class="sub-menu__item"><a href="#">Виртуальная реальность</a></li>
+                    <li class="sub-menu__item"><a href="#">Моноподы для селфи</a></li>
+                    <li class="sub-menu__item"><a href="#">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu__column">
+                  <ul>
+                    <li class="sub-menu__item"><a href="#">Фитнес-браслеты</a></li>
+                    <li class="sub-menu__item"><a href="#">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu__column">
+                  <ul>
+                    <li class="sub-menu__item"><a href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li class="site-nav__item--delivery"><a class="site-nav__delivery" href="#">Доставка</a></li>
@@ -214,13 +226,13 @@
           </div>
           <ul class="user-nav footer__user-nav">
             <li class="footer__user-item footer__user-item--enter">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Войти</a>
+              <a class="footer__user-item--enter" href="#">Войти</a>
             </li>
             <li class="footer__user-item footer__user-item--compare">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a>
+              <a class="footer__user-item--compare" href="#">Сравнить</a>
             </li>
             <li class="footer__user-item footer__user-item--cart">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a>
+              <a class="footer__user-item--cart" href="#">Корзина</a>
             </li>
           </ul>
         </div>
@@ -262,30 +274,27 @@
     </footer>
 
     <div class="modal">
-
-      <button type="button" aria-label="Закрыть контактную форму Девайс"><span>Закрыть окно</span></button>
-      <form class="modal_form" method="POST" action="https://echo.htmlacademy.ru">
-
-        <label for="modal-name">Ваше имя:</label>
-        <input class="modal__name" type="text" id="modal-name" name="name" placeholder="Имя Фамилия">
-
-        <label for="modal-email">Ваш e-mail:</label>
-        <input class="modal__email" type="email" id="modal-email" name="email" placeholder="email@example.com">
-
-        <label for="modal-message">Текст письма:</label>
-        <textarea class="modal__text" id="modal-message" name="message" placeholder="В свободной форме"></textarea>
-
-        <input class="modal__submit" type="submit" value="Отправить">
-
+      <button class="modal-close-btn" type="button" aria-label="Закрыть контактную форму Девайс"><span class="visually-hidden">Закрыть окно</span></button>
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
+        <div class="field-wrapper">
+          <label class="modal__name" for="modal-name">Ваше имя:</label>
+          <input class="modal__name" type="text" id="modal-name" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="field-wrapper">
+          <label class="modal__email" for="modal-email">Ваш e-mail:</label>
+          <input class="modal__email" type="email" id="modal-email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="message-wrapper">
+          <label for="modal-message">Текст письма:</label>
+          <textarea class="modal__text" id="modal-message" name="message" rows="6" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="modal__submit" type="submit" value="Отправить">Отправить
       </form>
-
     </div>
 
     <div class="map-popup">
-
-      <button type="button" aria-label="Закрыть карту проезда к Девайс"><span>Закрыть карту</span></button>
+      <button class="map-popup-close" type="button" aria-label="Закрыть карту проезда к Девайс"><span class="visually-hidden">Закрыть карту</span></button>
       <img src="img/map-big.jpg" alt="Адрес фирмы 'Device': Москва, ул. Строителей, 15" width="960" height="559">
-
     </div>
   </body>
 </html>

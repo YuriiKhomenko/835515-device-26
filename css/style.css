@@ -872,14 +872,44 @@ button {
 }
 
 .main-content {
-  display: flex;
-  padding-top: 29px;
+  position: relative;
 }
 
-.main .wrapper:first-child {
+.main-content::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.main-content::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: calc(50% + 252px);
+  top: 0;
+}
+
+.main-wrapper {
+  width: 1160px;
+  margin: auto;
+  margin-bottom: 46px;
   padding-top: 4px;
   padding-right: 60px;
   padding-left: 60px;
+  word-break: break-word;
+}
+
+.items-wrapped {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .main__title {
@@ -938,15 +968,8 @@ button {
   flex-shrink: 0;
 }
 
-.filter::before {
-  content: "";
-  position: absolute;
-  width: 4000px;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  background-color: rgba(0, 0, 0, 0.08);
-  z-index: -1;
+.filter-form {
+  padding-top: 59px;
 }
 
 .filter-form__title {
@@ -956,30 +979,21 @@ button {
   font-weight: bold;
 }
 
-.filter-form .filter-form__title:first-child {
-  padding-top: 83px;
-  padding-bottom: 17px;
-}
-
-.filter-form__title::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 2px;
-  top: 71px;
-  left: 0px;
-  background-color: #000000;
-  z-index: -1;
-}
 
 .filter-title {
-  padding-top: 25px;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 23px;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  word-break: break-word;
+}
+
+b.filter-title {
+  padding-top: 22px;
 }
 
 .filter-form__label {
@@ -995,7 +1009,7 @@ button {
 .filter-form__label::before {
   content: "";
   position: absolute;
-  width: 23px;
+  width: 27px;
   height: 23px;
   top: 9px;
   left: 0px;
@@ -1007,7 +1021,7 @@ button {
 .filter-form__checkbox:checked + .filter-form__label::before {
   content: "";
   position: absolute;
-  width: 23px;
+  width: 27px;
   height: 23px;
   top: 9px;
   left: 0px;
@@ -1095,28 +1109,6 @@ button {
   padding-left: 73px;
   padding-top: 27px;
   padding-bottom: 25px;
-}
-
-.sorting::before {
-  content: "";
-  position: absolute;
-  width: 10000px;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  background-color: rgba(0, 0, 0, 0.08);
-  z-index: -1;
-}
-
-.sorting::after {
-  content: "";
-  position: absolute;
-  width: 10000px;
-  height: 100%;
-  top: 0px;
-  left: 832px;
-  background-color: rgba(0, 0, 0, 0.08);
-  z-index: -1;
 }
 
 .sorting b {
@@ -1291,15 +1283,13 @@ button {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
-}
-
-.num__item {
-  padding-left: 32px;
-  padding-right: 32px;
+  justify-content: space-between;
 }
 
 .num__item a {
   opacity: 0.3;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 .num__item a:hover {

@@ -968,22 +968,43 @@ button {
   flex-shrink: 0;
 }
 
-.filter-form {
-  padding-top: 59px;
-}
-
 .filter-form__title {
+  padding-bottom: 24px;
+  padding-top: 10px;
   position: relative;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
 }
 
+.filter-form__title:before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background-color: #000000;
+  top: 0px;
+  left: 0px;
+}
+
+.filter-form__fieldset {
+  position: relative;
+  display: flex;
+  padding: 0;
+  padding-right: 120px;
+  margin: 0;
+  margin-bottom: 58px;
+  border: 0;
+}
+
+.filter-form__fieldset:last-of-type {
+  margin-bottom: 10px;
+}
 
 .filter-title {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 23px;
+  margin-bottom: 47px;
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -1030,6 +1051,12 @@ b.filter-title {
   background-position: 0 0;
 }
 
+.filter-form__checkbox:focus + .filter-form__label::before,
+.filter-form__radio:focus + .filter-form__label--radio::before {
+  outline: none;
+  box-shadow: 0 0 0 3px #61acee;
+}
+
 .filter-form__checkbox:checked + .filter-form__label:hover::before,
 .filter-form__checkbox:hover + .filter-form__label:hover::before {
   opacity: 0.6;
@@ -1053,6 +1080,7 @@ b.filter-title {
   font-size: 14px;
   line-height: 40px;
   list-style: none;
+  cursor: pointer;
 }
 
 .filter-form__label--radio::before {
@@ -1095,12 +1123,39 @@ b.filter-title {
   cursor: pointer;
 }
 
-.filter-form__fieldset {
-  display: flex;
-  padding: 0;
-  padding-right: 120px;
-  margin: 0;
+.filter-form__submit {
+  position: relative;
+  width: 200px;
+  justify-content: flex-start;
+  cursor: pointer;
   border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: transparent;
+  letter-spacing: 0.2em;
+}
+
+.filter-form__submit::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  width: 100%;
+  height: 8px;
+  background-color: #f0c52e;
+  z-index: -1;
+}
+
+.filter-form__submit:focus {
+  background-color: #f0c52e;
+}
+
+.filter-form__submit:hover {
+  background-color: #f0c52e;
+}
+
+.filter-form__submit:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .sorting {

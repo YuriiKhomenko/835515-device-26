@@ -512,6 +512,19 @@ button {
   letter-spacing: 0.01em;
 }
 
+.popular-goods__item a:hover::before,
+.popular-goods__item a:active::before {
+  opacity: 1.0;
+}
+
+.popular-goods__item a:active::after {
+  opacity: 0.3;
+}
+
+.popular-goods__item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .popular-goods__item a::before {
   content: "";
   position: absolute;
@@ -519,7 +532,8 @@ button {
   width: 160px;
   top: 3px;
   left: 0px;
-  background-color: #f7e296;
+  background-color: #f0c52e;
+  opacity: 0.5;
 }
 
 .popular-goods__item--vr a::after {

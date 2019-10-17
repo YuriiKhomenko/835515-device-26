@@ -629,6 +629,7 @@ button {
 .services {
   position: relative;
   display: flex;
+  margin-bottom: 100px;
 }
 
 .services__list {
@@ -641,7 +642,7 @@ button {
 }
 
 .services__item {
-  margin-bottom: 35px;
+  margin-bottom: 19px;
 }
 
 .services__item:last-child {
@@ -701,7 +702,8 @@ button {
 
 .services__info h3 {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 29px;
+  padding-top: 80px;
   font-size: 47px;
   line-height: 48px;
   font-weight: bold;
@@ -721,9 +723,55 @@ button {
 }
 
 .services__info {
+  position: relative;
   display: none;
   padding-left: 117px;
   padding-right: 300px;
+}
+
+.services__info--delivery::before {
+  content: "";
+  position: absolute;
+  width: 136px;
+  height: 164px;
+  top: 89px;
+  right: 65px;
+  background-image: url("../img/delivery.svg");
+}
+
+.services__info--guarantee::before {
+  content: "";
+  position: absolute;
+  width: 171px;
+  height: 195px;
+  top: 89px;
+  right: 65px;
+  background-image: url("../img/warranty.svg");
+}
+
+.services__info--credit::before {
+  content: "";
+  position: absolute;
+  width: 156px;
+  height: 188px;
+  top: 89px;
+  right: 65px;
+  background-image: url("../img/credit.svg");
+}
+
+.services-wrapped {
+  position: relative;
+}
+
+.services-wrapped::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 288px;
+  top: 104px;
+  left: 0px;
+  background-color: #e5e5e5;
+  z-index: -2;
 }
 
 .producers__list {

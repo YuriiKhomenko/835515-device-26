@@ -63,12 +63,12 @@
         <section class="slider">
           <h2 class="visually-hidden">Лучшие товары в магазине "Девайс"</h2>
           <ul class="slider__list">
-            <li class="slider__item slider__item--1">
+            <li class="slider__item slider__item--1 slider__item--active">
               <div class="slider__img">
                 <img src="img/slider-1.png" alt="монопод" width="384" height="486">
               </div>
               <div class="slider__content">
-                <b class="slider__title slider__title--1">Делай селфи, как Бен Стиллер!</b>
+                <b class="slider__title">Делай селфи,<br> как Бен Стиллер!</b>
                 <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
                   Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a class="slider__link" href="#">Подробнее</a>
@@ -91,7 +91,7 @@
                 <img src="img/slider-2.png" alt="фитнес-браслет" width="345" height="485">
               </div>
               <div class="slider__content">
-                <b class="slider__title slider__title--2">Худеем правильно</b>
+                <b class="slider__title">Худеем <br> правильно!</b>
                 <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и
                   соблюдать диету</p>
                 <a class="slider__link" href="#">Подробнее</a>
@@ -110,7 +110,7 @@
                 <img src="img/slider-3.png" alt="квадрокоптер" width="526" height="334">
               </div>
               <div class="slider__content">
-                <b class="slider__title slider__title--3">Порхает как бабочка, жалит как пчела</b>
+                <b class="slider__title">Порхает как бабочка, жалит как пчела!</b>
                 <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
                   замаскированным под стандартную камеру.</p>
                 <a class="slider__link" href="#">Подробнее</a>
@@ -150,8 +150,8 @@
         <section class="services wrapper">
           <ul class="services__list">
             <li class="services__item"><button type="button" class="services__btn services__btn--active">Доставка</button></li>
-            <li class="services__item"><button type="button" class="services__btn">Гарантия</button></li>
-            <li class="services__item"><button type="button" class="services__btn">Кредит</button></li>
+            <li class="services__item"><button type="button" class="services__btn services__btn-guarantee">Гарантия</button></li>
+            <li class="services__item"><button type="button" class="services__btn services__btn-credit">Кредит</button></li>
           </ul>
           <ul class="services__info-list">
             <li class="services__info services__info--delivery">
@@ -161,7 +161,7 @@
             </li>
             <li class="services__info services__info--guarantee">
               <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
                 Товар, не дом, конечно же.</p>
             </li>
             <li class="services__info services__info--credit">
@@ -177,23 +177,31 @@
           <h2 class="visually-hidden">Компании производители</h2>
           <ul class="producers__list">
             <li class="producers__item">
-              <a href="#"><img src="img/logo-1-dji.png" alt="Лого DJI" width="260" height="100"></a>
+              <a class="producers__dji" href="#">
+                <img src="img/logo-dji-color.png" alt="Лого DJI" width="260" height="100">
+              </a>
             </li>
             <li class="producers__item">
-              <a href="#"><img src="img/logo-2-spgadget.png" alt="Лого SP. Gadgets" width="260" height="100"></a>
+              <a class="producers__spgadget" href="#">
+                <img src="img/logo-spgadget-color.png" alt="Лого SP. Gadgets" width="260" height="100">
+              </a>
             </li>
             <li class="producers__item">
-              <a href="#"><img src="img/logo-3-gopro.png" alt="Лого GoPro" width="260" height="100"></a>
+              <a class="producers__gopro" href="#">
+                <img src="img/logo-gopro-color.png" alt="Лого GoPro" width="260" height="100">
+                </a>
             </li>
             <li class="producers__item">
-              <a href="#"><img src="img/logo-4-vive.png" alt="Лого Vive" width="260" height="100"></a>
+              <a class="producers__vive" href="#">
+                <img src="img/logo-vive-color.png" alt="Лого Vive" width="260" height="100">
+              </a>
             </li>
           </ul>
         </section>
         <div class="inner-wrapper">
           <section class="about-us">
             <h2 class="about-us__title">О нас</h2>
-            <p class="about-us__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
+            <p class="about-us__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p class="about-us__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
             <ul class="about-us__list">
               <li>Деловые Линии</li>
@@ -298,5 +306,6 @@
       <button class="map-popup-close" type="button" aria-label="Закрыть карту проезда к Девайс"><span class="visually-hidden">Закрыть карту</span></button>
       <img src="img/map-big.jpg" alt="Адрес фирмы 'Device': Москва, ул. Строителей, 15" width="960" height="559">
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

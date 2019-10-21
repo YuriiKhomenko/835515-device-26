@@ -264,7 +264,7 @@ button {
   content: "";
   position: absolute;
   top: 1px;
-  right: 1px;
+  right: 5px;
   width: 16px;
   height: 16px;
   background-image: url("../img/plus.svg");
@@ -273,19 +273,16 @@ button {
   opacity: 0.3;
 }
 
-.site-nav__guarantee {
-  margin-right: 114px;
-}
-
 .site-nav a {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 0.2em;
 }
 
 .site-nav__item--delivery {
-  margin-right: 32px;
+  margin-right: 34px;
   padding-left: 22px;
 }
 
@@ -353,32 +350,62 @@ button {
 }
 
 .slider {
+  position: relative;
   margin-top: -111px;
-  margin-bottom: 84px;
+  z-index: 0;
 }
 
 .slider__list {
   padding: 0;
   margin: 0 auto;
-  width: 1000px;
   list-style: none;
 }
 
 .slider__item {
+  padding-left: 90px;
+  padding-bottom: 99px;
   display: none;
-}
-
-.slider__item--1 {
-  display: none;
-}
-
-.slider__item:nth-child(1) {
-  position: relative;
-  display: flex;
   margin: 0 auto;
 }
 
+.slider__item--active {
+  display: flex;
+}
+
+.slider__item.slider__item--2 {
+  padding-left: 116px;
+  padding-bottom: 87px;
+}
+
+.slider__item--2 .slider__img {
+  padding-top: 13px;
+  margin-right: 138px;
+}
+
+.slider__item--2 .slider__text {
+  padding-right: 85px;
+}
+
+.slider__item.slider__item--3 {
+  padding-left: 32px;
+  padding-bottom: 107px;
+}
+
+.slider__item--3 .slider__img {
+  padding-top: 66px;
+  margin-right: 43px;
+}
+
+.slider__item--3 .slider__title {
+  padding-right: 55px;
+}
+
+.slider__item--3 .slider__text {
+  padding-right: 85px;
+}
+
 .slider__content {
+  position: relative;
   padding-top: 50px;
 }
 
@@ -397,53 +424,61 @@ button {
   letter-spacing: 0.01em;
 }
 
-.slider__title::before {
+.slider__content::before {
   content: "";
   position: absolute;
   width: 100px;
   height: 7px;
   background-color: #ffffff;
   left: 1px;
-  top: -42px;
+  top: 37px;
 }
 
-.slider__title--1::after {
+.slider__item--1 .slider__content::after {
   content: "01";
   position: absolute;
   font-size: 179.2px;
   line-height: 179.2px;
+  font-weight: bold;
   color: #ffffff;
-  right: -21px;
-  top: -92px;
+  right: 49px;
+  top: -13px;
+  z-index: -1;
 }
 
-.slider__title--2::after {
+.slider__item--2 .slider__content::after {
   content: "02";
   position: absolute;
   font-size: 179.2px;
   line-height: 179.2px;
+  font-weight: bold;
   color: #ffffff;
-  right: -21px;
-  top: -92px;
+  right: 49px;
+  top: -13px;
+  z-index: -1;
 }
 
-.slider__title--3::after {
+.slider__item--3 .slider__content::after {
   content: "03";
   position: absolute;
   font-size: 179.2px;
   line-height: 179.2px;
+  font-weight: bold;
   color: #ffffff;
-  right: -21px;
-  top: -92px;
+  right: 49px;
+  top: -13px;
+  z-index: -1;
 }
 
 .slider__text {
   padding: 0;
   margin: 0;
+  padding-right: 50px;
   margin-bottom: 38px;
   font-size: 15px;
   line-height: 30px;
   font-family: "Open Sans", "Verdana", "sans-serif";
+  letter-spacing: 0.01em;
 }
 
 .slider__link {
@@ -468,6 +503,10 @@ button {
   padding-bottom: 5px;
 }
 
+.slider__item--3 td {
+  padding-right: 36px;
+}
+
 .slider__term td:last-child {
   padding-right: 0;
 }
@@ -480,15 +519,14 @@ button {
 }
 
 .slider-nav {
-  display: flex;
-  flex-direction: row-reverse;
-  bottom: 166px;
-  position: relative;
+  position: absolute;
+  bottom: 257px;
+  right: 68px;
 }
 
 .slider-nav__btn {
   position: relative;
-  margin-right: 13px;
+  margin-right: 14px;
   border: none;
 }
 
@@ -531,7 +569,7 @@ button {
 
 .popular-goods__item a {
   display: block;
-  padding-top: 198px;
+  padding-top: 196px;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -582,6 +620,10 @@ button {
   background-image: url("../img/monopodes.svg");
 }
 
+.popular-goods__item--monopodes a {
+  padding-right: 40px;
+}
+
 .popular-goods__item--action_cam a::after {
   content: "";
   position: absolute;
@@ -623,17 +665,19 @@ button {
 }
 
 .popular-goods {
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 }
 
 .services {
   position: relative;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 166px;
 }
 
 .services__list {
-  padding: 80px 0;
+  padding:0;
+  padding-top: 85px;
+  padding-bottom: 65px;
   margin: 0;
   flex-shrink: 0;
   list-style: none;
@@ -642,7 +686,7 @@ button {
 }
 
 .services__item {
-  margin-bottom: 19px;
+  margin-bottom: 23px;
 }
 
 .services__item:last-child {
@@ -653,8 +697,8 @@ button {
   position: relative;
   border: 0;
   padding: 0;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
@@ -667,7 +711,7 @@ button {
 .services__btn::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 16px;
   left: 0px;
   width: 100%;
   height: 8px;
@@ -718,6 +762,18 @@ button {
   letter-spacing: 0.01em;
 }
 
+.services__info--credit p {
+  padding-right: 10px;
+}
+
+.services__btn-guarantee.services__btn--active {
+  padding-left: 28px;
+}
+
+.services__btn-credit.services__btn--active {
+  padding-left: 43px;
+}
+
 .services__info:first-child {
   display: block;
 }
@@ -744,8 +800,8 @@ button {
   position: absolute;
   width: 171px;
   height: 195px;
-  top: 89px;
-  right: 65px;
+  top: 67px;
+  right: 46px;
   background-image: url("../img/warranty.svg");
 }
 
@@ -754,8 +810,8 @@ button {
   position: absolute;
   width: 156px;
   height: 188px;
-  top: 89px;
-  right: 65px;
+  top: 67px;
+  right: 68px;
   background-image: url("../img/credit.svg");
 }
 
@@ -768,15 +824,53 @@ button {
   position: absolute;
   width: 100%;
   height: 288px;
-  top: 104px;
+  top: 106px;
   left: 0px;
   background-color: #e5e5e5;
   z-index: -2;
 }
 
+.producers {
+  margin-bottom: 46px;
+}
+
 .producers__list {
+  padding: 0;
+  margin: 0;
   display: flex;
   list-style: none;
+}
+
+.producers__item {
+  margin-right: 39px;
+}
+
+.producers__item a {
+  display: block;
+}
+
+.producers__item img {
+  opacity: 0;
+}
+
+.producers__item img:hover {
+  opacity: 1;
+}
+
+.producers__dji {
+  background-image: url('../img/logo-dji-grey.png');
+}
+
+.producers__spgadget {
+  background-image: url('../img/logo-spgadget-grey.png');
+}
+
+.producers__gopro {
+  background-image: url('../img/logo-gopro-grey.png');
+}
+
+.producers__vive {
+  background-image: url('../img/logo-vive-grey.png');
 }
 
 .inner-wrapper {
@@ -847,7 +941,7 @@ button {
   padding-top: 14px;
   padding-right: 41px;
   padding-bottom: 14px;
-  padding-left: 41px;
+  padding-left: 44px;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2em;
@@ -863,7 +957,7 @@ button {
 .goods__cart::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 21px;
   left: 0px;
   width: 100%;
   height: 8px;

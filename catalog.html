@@ -75,11 +75,23 @@
             <b class="filter-title">Фильтр:</b>
           </div>
           <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
-            <fieldset class="filter-form__fieldset">
+            <fieldset class="filter-form__fieldset filter-form__fieldset--range">
               <legend class="filter-form__title title-first">Стоимость</legend>
-              <input type="range" name="price" min="0" max="10000" step="10">
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">от <input name="min-price" type="text" value="0" readonly></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="5000" readonly></label>
+                </div>
+              </div>
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset class="filter-form__fieldset filter-form__fieldset--checkbox">
               <legend class="filter-form__title">Цвет</legend>
               <input class="filter-form__checkbox visually-hidden" type="checkbox" id="black-color" name="black-color" checked>
               <label class="filter-form__label" for="black-color">Черный</label>
@@ -98,7 +110,7 @@
               <input class="filter-form__checkbox visually-hidden" type="checkbox" id="pink-color" name="pink-color">
               <label class="filter-form__label" for="pink-color">Розовый</label>
             </fieldset>
-            <fieldset class="filter-form__fieldset">
+            <fieldset class="filter-form__fieldset filter-form__fieldset--radio">
               <legend class="filter-form__title">Bluetooth</legend>
               <ul class="radio-list">
                 <li>
@@ -145,7 +157,7 @@
                     <a class="goods__compare" href="#">Добавить к сравнению</a>
                   </div>
                   <div class="goods__item-info">
-                    <h3 class="goods__item-title">Любительская селфи-палка</h3>
+                    <h3 class="goods__item-title">Любительская селфи&#8209;палка</h3>
                     <span class="goods__item-price">500 руб.</span>
                   </div>
                 </li>
@@ -157,7 +169,7 @@
                     <a class="goods__compare" href="#">Добавить к сравнению</a>
                   </div>
                   <div class="goods__item-info">
-                    <h3 class="goods__item-title">Пофессиональная селфи-палка</h3>
+                    <h3 class="goods__item-title">Пофессиональная селфи&#8209;палка</h3>
                     <span class="goods__item-price">1 500 руб.</span>
                   </div>
                 </li>
@@ -169,7 +181,7 @@
                     <a class="goods__compare" href="#">Добавить к сравнению</a>
                   </div>
                   <div class="goods__item-info">
-                    <h3 class="goods__item-title">Непотопляемая селфи-палка</h3>
+                    <h3 class="goods__item-title">Непотопляемая селфи&#8209;палка</h3>
                     <span class="goods__item-price">2 500 руб.</span>
                   </div>
                 </li>
@@ -181,7 +193,7 @@
                     <a class="goods__compare" href="#">Добавить к сравнению</a>
                   </div>
                   <div class="goods__item-info">
-                    <h3 class="goods__item-title">Селфи-палка "Следуй за мной"</h3>
+                    <h3 class="goods__item-title">Селфи&#8209;палка "Следуй за мной"</h3>
                     <span class="goods__item-price">4 900 руб.</span>
                   </div>
                 </li>

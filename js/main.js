@@ -1,26 +1,5 @@
 'use strict'
 
-// var serviceBtns = document.querySelectorAll('.services__btn');
-// var serviceList = document.querySelector('.services__list');
-// var servicesInfoList = document.querySelectorAll('.services__info');
-// var orders = ['Доставка', 'Гарантия', 'Кредит']
-
-// serviceList.addEventListener('mousedown', function(e) {
-//   var index = orders.indexOf(e.target.innerHTML);
-//   for (var i = 0; i < serviceBtns.length; i++) {
-//     if (serviceBtns[i].classList.length > 1) {
-//       serviceBtns[i].classList.remove('services__btn--active');
-//     }
-//     servicesInfoList[i].style.display = 'none';
-//     if (i == index) {
-//       servicesInfoList[i].style.display = 'block';
-//     }
-//   }
-//   if (e.target.nodeName == 'BUTTON') {
-//     e.target.classList.add('services__btn--active');
-//   }
-// })
-
 var sliderControlls = document.querySelectorAll('.slider-nav__btn');
 var sliders = document.querySelectorAll('.slider__item');
 sliderControlls.forEach(function (button, index) {
@@ -50,4 +29,66 @@ servicesControlls.forEach(function (button, index) {
     button.classList.add('services__btn--active');
     servicesInfos[index].classList.add('services__info--active');
   })
+})
+
+var mapImg = document.querySelector('.contacts__map').querySelector('img');
+var mapPopup = document.querySelector('.map-popup');
+var mapClose = document.querySelector('.map-popup-close');
+var body = document.querySelector('body');
+
+var showMap = function () {
+  mapPopup.style.display = 'block';
+}
+
+var closeMap = function () {
+  mapPopup.style.display = 'none';
+}
+
+mapImg.addEventListener('click', function(e) {
+  e.preventDefault();
+  showMap();
+});
+mapClose.addEventListener('click', closeMap);
+
+
+var modalForm = document.querySelector('.modal');
+var modalClose = document.querySelector('.modal-close-btn');
+var contactBtn = document.querySelector('.contacts__write-us');
+var emailField = document.querySelector('#modal-email');
+var submit = document.querySelector('.modal__submit');
+
+var showModal = function () {
+  modalForm.style.display = 'block';
+}
+
+var closeModal = function () {
+  modalForm.style.display = 'none';
+}
+
+contactBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  showModal();
+})
+
+modalClose.addEventListener('click', function(e) {
+  e.preventDefault();
+  closeModal();
+})
+
+document.addEventListener('keydown', function (e) {
+  if (e.keyCode === 27) {
+    closeMap();
+    closeModal();
+  }
+})
+
+var validateEmail = function() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/.test(emailField.value)) {
+    console.log('Good email');
+  }
+  console.log("You have entered an invalid email address!");
+}
+submit.addEventListener('click', function(e) {
+  e.preventDefault();
+  validateEmail();
 })

@@ -52,17 +52,21 @@ mapClose.addEventListener('click', closeMap);
 
 
 var modalForm = document.querySelector('.modal');
-var modalClose = document.querySelector('.modal-close-btn');
+var modalCloseBtn = document.querySelector('.modal-close-btn');
 var contactBtn = document.querySelector('.contacts__write-us');
 var emailField = document.querySelector('#modal-email');
 var submit = document.querySelector('.modal__submit');
+var modalName = document.querySelector('#modal-name');
+var modalText = document.querySelector('#modal-message');
 
 var showModal = function () {
-  modalForm.style.display = 'block';
+  modalForm.classList.add('modal-show');
 }
 
 var closeModal = function () {
-  modalForm.style.display = 'none';
+  if (modalForm.classList.contains('modal-show')) {
+    modalForm.classList.remove('modal-show');
+  }
 }
 
 contactBtn.addEventListener('click', function(e) {
@@ -70,7 +74,7 @@ contactBtn.addEventListener('click', function(e) {
   showModal();
 })
 
-modalClose.addEventListener('click', function(e) {
+modalCloseBtn.addEventListener('click', function(e) {
   e.preventDefault();
   closeModal();
 })
@@ -82,13 +86,22 @@ document.addEventListener('keydown', function (e) {
   }
 })
 
-var validateEmail = function() {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/.test(emailField.value)) {
-    console.log('Good email');
+var checkFields = function () {
+  if (modalName.length < 2 || modalText.length < 1) {
+    modalName.style.backgroundColor = '#f6dada';
   }
-  console.log("You have entered an invalid email address!");
 }
+
+var validateEmail = function() {
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/.test(emailField.value)) {
+    modalForm.classList.add('modal-error');
+    console.log('Пожалуйста, введите правильный адрес электронной почты');
+  }
+
+}
+
 submit.addEventListener('click', function(e) {
   e.preventDefault();
   validateEmail();
+  checkFields();
 })

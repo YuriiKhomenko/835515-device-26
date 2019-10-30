@@ -1647,7 +1647,10 @@ a {
 
 .map-popup iframe {
   border: 0;
-  background-image: url("../img/map-big.jpg")
+}
+
+.map-popup {
+  background-image: url("../img/map-big.jpg");
 }
 
 .user-nav__exit {
@@ -1736,7 +1739,6 @@ a {
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
-  /* width: 1100px; */
 }
 
 .breadcumbs__item {

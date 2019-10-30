@@ -1610,6 +1610,7 @@ a {
   right: 22px;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
 }
 
 .map-popup-close:focus {
@@ -1639,6 +1640,11 @@ a {
 .map-popup-close:active,
 .map-popup-close:active::before {
   opacity: 0.3;
+}
+
+.map-popup iframe {
+  border: 0;
+  background-image: url("../img/map-big.jpg")
 }
 
 .user-nav__exit {

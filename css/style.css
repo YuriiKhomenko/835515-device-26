@@ -1,27 +1,27 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/gilroyextrabold.woff"), url("../fonts/gilroyextrabold.woff2");
+  src: url("../fonts/gilroyextrabold.woff2"), url("../fonts/gilroyextrabold.woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/gilroylight.woff"), url("../fonts/gilroylight.woff2");
+  src: url("../fonts/gilroylight.woff2"), url("../fonts/gilroylight.woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans.woff"), url("../fonts/opensans.woff2");
+  src: url("../fonts/opensans.woff2"), url("../fonts/opensans.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans Light";
-  src: url("../fonts/opensanslight.woff"), url("../fonts/opensanslight.woff2");
+  src: url("../fonts/opensanslight.woff2"), url("../fonts/opensanslight.woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -59,9 +59,11 @@ a {
 }
 
 .wrapper {
-  width: 1160px;
+  width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .header .wrapper {
@@ -82,6 +84,11 @@ a {
 
 .wrapper.wrapper-header {
   padding-bottom: 162px;
+  width: 1160px;
+}
+
+.wrapper.wrapper-header--catalog {
+  padding-bottom: 49px;
 }
 
 .user-nav {
@@ -575,6 +582,8 @@ a {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  font-weight: 300;
+  color: #464646;
 }
 
 .slider-nav {
@@ -830,10 +839,10 @@ a {
 
 .services__info p {
   margin: 0;
-  font-family: "Open Sans", "verdana", "sans-serif";
+  font-family: "Open Sans Light", "verdana", "sans-serif";
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
 }
 
 .services__info--credit p {
@@ -935,19 +944,19 @@ a {
 }
 
 .producers__item--dji {
-  background-image: url('../img/logo-dji-grey.png');
+  background-image: url("../img/logo-dji-grey.png");
 }
 
 .producers__item--spgadget {
-  background-image: url('../img/logo-spgadget-grey.png');
+  background-image: url("../img/logo-spgadget-grey.png");
 }
 
 .producers__item--gopro {
-  background-image: url('../img/logo-gopro-grey.png');
+  background-image: url("../img/logo-gopro-grey.png");
 }
 
 .producers__item--vive {
-  background-image: url('../img/logo-vive-grey.png');
+  background-image: url("../img/logo-vive-grey.png");
 }
 
 .inner-wrapper {
@@ -1021,7 +1030,7 @@ a {
   height: 8px;
   top: 16px;
   left: 1px;
-  background-image: url('../img/slider-info-button.png');
+  background-image: url("../img/slider-info-button.png");
 }
 
 .about-us__link {
@@ -1707,6 +1716,7 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0;
+  width: 1160px;
 }
 
 .main__title {
@@ -1725,6 +1735,8 @@ a {
   display: flex;
   list-style: none;
   padding: 0;
+  flex-wrap: wrap;
+  /* width: 1100px; */
 }
 
 .breadcumbs__item {
@@ -2291,6 +2303,11 @@ b.filter-title {
 
 .goods__item-link {
   width: 270px;
+}
+
+.goods__item-price {
+  color: #464646;
+  font-weight: 300;
 }
 
 .goods__item-info {
